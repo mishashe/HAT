@@ -1,8 +1,8 @@
 # For github
-# cd /home/m.sheinman/Development/HGTproject
+# cd /home/msheinman/Development/HAT/
 # git add ./src/*.*
-# git commit --all -m "CAT taxonomic annotation for metagenomic analysis"
-# git push origin master
+# git commit --all -m "added empirical"
+# git push origin
 
 # To avoid problems run
 # export OPENBLAS_NUM_THREADS=1
