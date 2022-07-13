@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -p general
+#SBATCH -N 1
+#SBATCH -c 26
+#SBATCH -t 168:00:00
+#SBATCH --output=/home/msheinman/Development/HAT/logs/resMPI.txt
+#SBATCH --mem=100GB
+#SBATCH --mail-user msheinman@sevsu.ru
+#SBATCH --mail-type FAIL
+ 
+
+srun /home/msheinman/Software/R-4.2.1/bin/Rscript /home/msheinman/Development/HAT/src/find_matches_two_directories.R
+
+<<COMMENT1
+to run use:
+sbatch /home/msheinman/Development/HAT/src/submitJob.txt
+to see stat
+sstat
+sacct
+sacct --format "CPUTime,MaxRSS,JobID,State"
+squeue -u msheinman
+scancel <jobid>
+COMMENT1
+
